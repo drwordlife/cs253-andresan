@@ -1,0 +1,19 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+
+<a href="/basicblog" class="main-title">Andrew's Blog</a>
+
+<form method="post">
+	<label>
+		<div>subject</div>
+		<input type="text" name="subject" value="{{subject}}">
+	</label>
+	<label>
+		<div>blog</div>
+		<textarea name="content">{{content}}</textarea>
+	</label>
+	<div class="error">{{error}}</div>
+	<input type="submit">
+</form>
+
+{% endblock %}

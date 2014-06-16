@@ -1,0 +1,16 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+
+<a href="/basicblog" class="main-title">Andrew's Blog</a>
+
+{% for entry in blog %}
+	<div class="post">
+		<div class="post-heading">
+			<a href="/basicblog/{{entry.key().id()}}" class="post-title">{{entry.subject}}</a>
+			<div class="post-date">{{entry.entrydate.date()}}</div>
+		</div>
+		<div class="post-content">{{entry.content}}</div>
+	</div>
+{% endfor %}
+
+{% endblock %}

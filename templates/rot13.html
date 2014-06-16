@@ -1,0 +1,16 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+
+<div>
+    <h2>Rot13 Caesar Cipher</h2>
+</div>
+<br>
+<form method="post">
+    Enter text below:
+    <br>
+    <textarea name="text" rows="4" cols="50">{{text}}</textarea>
+    <br>
+    <input type="submit">
+</form>
+
+{% endblock %}

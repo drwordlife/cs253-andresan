@@ -1,0 +1,14 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+
+<a href="/basicblog" class="main-title">Andrew's Blog</a>
+
+<div class="post">
+	<div class="post-heading">
+		<a href="/basicblog/{{blog.key().id()}}" class="post-title">{{blog.subject}}</a>
+		<div class="post-date">{{blog.entrydate.date()}}</div>
+	</div>
+	<div class="post-content">{{blog.content}}</div>
+</div>
+
+{% endblock %}
